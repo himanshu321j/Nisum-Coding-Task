@@ -58,3 +58,7 @@ To run the migrations, use the following Drush commands:
    ```bash
    drush migrate:import company_migration
    drush migrate:import user_migration
+
+## User Login
+   Uername- admin
+   Password- admin
