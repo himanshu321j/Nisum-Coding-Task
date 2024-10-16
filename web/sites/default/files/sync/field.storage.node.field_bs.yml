@@ -1,0 +1,23 @@
+uuid: ca4c0541-37cf-4632-8bb2-632971357708
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: FMT0IAD_5HqtfyQKmZmlfXC3BNmI0fqSqEAXtKn90QA
+id: node.field_bs
+field_name: field_bs
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

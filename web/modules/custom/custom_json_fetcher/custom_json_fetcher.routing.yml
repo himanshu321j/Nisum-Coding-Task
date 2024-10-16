@@ -1,0 +1,7 @@
+custom_json_fetcher.fetch:
+  path: '/fetch-json'
+  defaults:
+    _controller: '\Drupal\custom_json_fetcher\Controller\JsonFetcherController::fetchJsonData'
+    _title: 'Fetch JSON Data'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,20 @@
+uuid: 24afac04-07c9-4b15-bed7-704a702ddb0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_geo_lat
+  module:
+    - user
+id: user.user.field_geo_lat
+field_name: field_geo_lat
+entity_type: user
+bundle: user
+label: 'Geo (lat)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

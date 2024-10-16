@@ -1,0 +1,23 @@
+uuid: 18ce4563-b5c7-41fb-b869-7f3d9323bd36
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: _Tz3SSek6IQjkMkAujL0ETsunAF40UV4Uc1GSXwnxUY
+id: node.field_catch_phrase
+field_name: field_catch_phrase
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

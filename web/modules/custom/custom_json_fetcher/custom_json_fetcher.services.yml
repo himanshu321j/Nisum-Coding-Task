@@ -1,0 +1,4 @@
+services:
+  custom_json_fetcher.data_fetcher:
+    class: Drupal\custom_json_fetcher\JsonFetcher
+    arguments: ['@http_client']  # Inject the http_client service

@@ -1,0 +1,20 @@
+uuid: a1548e86-7f42-4c5e-9717-358b20198335
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_geo_lng
+  module:
+    - user
+id: user.user.field_geo_lng
+field_name: field_geo_lng
+entity_type: user
+bundle: user
+label: 'Geo (lng)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: 603e8b07-52f2-4170-8aa0-1dbdc9a5a0c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bs
+    - node.type.company
+id: node.company.field_bs
+field_name: field_bs
+entity_type: node
+bundle: company
+label: BS
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

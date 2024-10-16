@@ -1,0 +1,21 @@
+uuid: 2c05df07-f045-4b1c-b33f-072beab55825
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_geo_lat
+field_name: field_geo_lat
+entity_type: user
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

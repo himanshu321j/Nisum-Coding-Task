@@ -1,0 +1,25 @@
+_core:
+  default_config_hash: fLbS558MGfxkD5eVTiyrnZftjWzogJEtg8a2n6r50Qs
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+bundle: company
+third_party_settings: {  }
+content:
+  field_company_name:
+    label: Visible
+    label_display: inline
+    weight: 0
+    type: string_default
+  field_catch_phrase:
+    label: Visible
+    label_display: inline
+    weight: 1
+    type: string_default
+  field_bs:
+    label: Visible
+    label_display: inline
+    weight: 2
+    type: string_default

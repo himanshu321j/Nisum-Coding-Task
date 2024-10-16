@@ -1,0 +1,81 @@
+id: user_migration
+label: "Migrate Users"
+migration_group: custom_migration
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  urls: https://jsonplaceholder.typicode.com/users
+  fields:
+    - name: id
+      label: "User ID"
+      selector: id
+    - name: name
+      label: "Name"
+      selector: name
+    - name: username
+      label: "Username"
+      selector: username
+    - name: email
+      label: "Email"
+      selector: email
+    - name: phone
+      label: "Phone"
+      selector: phone
+    - name: website
+      label: "Website"
+      selector: website
+    - name: street
+      label: "Street"
+      selector: address/street
+    - name: suite
+      label: "Suite"
+      selector: address/suite
+    - name: city
+      label: "City"
+      selector: address/city
+    - name: zipcode
+      label: "Zipcode"
+      selector: address/zipcode
+    - name: geo_lat
+      label: "Latitude"
+      selector: address/geo/lat
+    - name: geo_lng
+      label: "Longitude"
+      selector: address/geo/lng
+    - name: company
+      label: "Company"
+      selector: company/name
+
+  ids:
+    id:
+      type: integer
+
+process:
+  name: name
+  field_name:
+    plugin: default_value
+    default: "Anonymous User"
+    source: name
+  field_username: username
+  mail: email
+  field_phone: phone
+  field_website: website
+  field_street: street
+  field_suite: suite
+  field_city: city
+  field_zipcode: zipcode
+  field_geo_lat: geo_lat
+  field_geo_lng: geo_lng
+  field_company:
+    plugin: migration_lookup
+    migration: company_migration
+    source: company
+
+destination:
+  plugin: entity:user
+
+dependencies:
+  enforced:
+    module:
+      - custom_migration_module

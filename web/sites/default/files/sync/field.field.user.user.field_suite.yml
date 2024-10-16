@@ -1,0 +1,20 @@
+uuid: 1c7b40a6-742b-494b-a642-443866bec66b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_suite
+  module:
+    - user
+id: user.user.field_suite
+field_name: field_suite
+entity_type: user
+bundle: user
+label: Suite
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

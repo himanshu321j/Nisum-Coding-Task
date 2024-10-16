@@ -1,0 +1,38 @@
+id: company_migration
+label: 'Migrate Companies'
+migration_group: custom_migration
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  urls: https://jsonplaceholder.typicode.com/users
+  fields:
+    - name: id
+      label: "User ID"
+      selector: id
+    - name: field_company_name
+      label: "Company Name"
+      selector: company/name
+    - name: catchPhrase
+      label: "CatchPhrase"
+      selector: "company/catchPhrase"
+    - name: bs
+      label: "BS"
+      selector: company/bs
+  ids:
+    id:
+      type: integer
+
+process:
+  title: field_company_name  # Map the company name to the 'title' field for the node
+  field_company_name: field_company_name
+  field_catchphrase: catchPhrase
+  field_bs: bs
+
+destination:
+  plugin: entity:node
+  default_bundle: company
+dependencies:
+  enforced:
+    module:
+      - custom_migration_module

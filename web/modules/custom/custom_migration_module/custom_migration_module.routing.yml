@@ -1,0 +1,7 @@
+custom_migration_module.users_page:
+  path: '/users-companies'
+  defaults:
+    _controller: '\Drupal\custom_migration_module\Controller\UserCompanyController::listUsers'
+    _title: 'Users and their Companies'
+  requirements:
+    _permission: 'access content'

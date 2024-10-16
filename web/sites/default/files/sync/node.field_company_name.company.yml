@@ -1,0 +1,16 @@
+_core:
+  default_config_hash: EQYypDa7f4aXMPw0UXyMBN5qVp8Q0HLQe0P77KCxK3U
+langcode: en
+status: true
+dependencies:
+  field:
+    - node.field_company_name
+  module:
+    - node
+bundle: company
+field_name: field_company_name
+type: string
+settings: {  }
+required: false
+translatable: true
+weight: 0

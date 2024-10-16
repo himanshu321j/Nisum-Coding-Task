@@ -1,0 +1,16 @@
+_core:
+  default_config_hash: j_Tr0IQSJKQhF-jYeOGAG3LS0tRLBeba5-pBj2VnWLg
+langcode: en
+status: true
+dependencies:
+  field:
+    - node.field_catch_phrase
+  module:
+    - node
+bundle: company
+field_name: field_catch_phrase
+type: string
+settings: {  }
+required: false
+translatable: true
+weight: 1

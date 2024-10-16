@@ -1,0 +1,7 @@
+name: 'Custom JSON Fetcher'
+type: module
+description: 'A module to fetch JSON data from an external URL.'
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - drupal:jsonapi
