@@ -43,10 +43,9 @@ source:
     - name: geo_lng
       label: "Longitude"
       selector: address/geo/lng
-    - name: company
-      label: "Company"
-      selector: company/name
-
+    - name: company_reference
+      label: "Company Name"
+      selector: company/name  # Assuming this is where the company name resides in your source
   ids:
     id:
       type: integer
@@ -68,13 +67,19 @@ process:
   field_geo_lat: geo_lat
   field_geo_lng: geo_lng
   field_company:
-    plugin: migration_lookup
-    migration: company_migration
-    source: company
+      plugin: entity_lookup
+      source: company_reference  # This is the company reference field in your source
+      entity_type: node  # Assuming you're referencing a 'node' entity
+      bundle_key: type
+      bundle: company  # The content type for 'Company'
+      value_key: title  # Match company node by title (or another unique key like node ID
 
 destination:
   plugin: entity:user
 
+migration_dependencies:
+  required:
+    - company_migration
 dependencies:
   enforced:
     module:
